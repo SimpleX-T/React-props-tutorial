@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 // const messages = [
 // 	"Learn React ⚛️",
@@ -59,5 +59,26 @@ import { useState } from "react";
 // }
 
 function App() {
-	return <h1>COUNT</h1>;
+	const currDate = new Date();
+
+	// Get the past date (subtracting 30 days from the current date)
+	const pastDate = new Date(currDate);
+	console.log(pastDate);
+	pastDate.setDate(currDate.getDate() - 30);
+
+	// Get the future date (adding 30 days to the current date)
+	const futureDate = new Date(currDate);
+	futureDate.setDate(currDate.getDate() + 30);
+
+	// console.log("Current Date:", currDate);
+	// console.log("Past Date (30 days ago):", pastDate);
+	// console.log("Future Date (30 days later):", futureDate);
+
+	return (
+		<div>
+			<h1>COUNT</h1>;
+		</div>
+	);
 }
+
+export default App;
